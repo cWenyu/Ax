@@ -1,84 +1,44 @@
-# Turborepo starter
+# Web + App
 
-This Turborepo starter is maintained by the Turborepo core team.
+The web is using Next.js
 
-## Using this example
+App is using Expo + React Native to adapt iOS / Android
 
-Run the following command:
+.turbo
+这个目录看起来是与 Turbo（例如 TurboRepo）相关的，可能用于管理 monorepo（单仓库多项目结构）中的缓存、配置和依赖关系等。Turbo 是一个流行的工具，用于优化 monorepo 的构建和开发流程。
 
-```sh
-npx create-turbo@latest
-```
+cache、cookies、daemon、preferences
+这些目录可能与项目的缓存、用户数据存储、后台守护进程以及用户设置等相关。可能是用于处理用户会话、配置和其他状态数据的部分。
 
-## What's inside?
+apps
+这是项目中各个应用的根目录，包含了多个子目录：
 
-This Turborepo includes the following packages/apps:
+docs
+这个子目录看起来是文档相关的，可能是用于展示网站文档或者项目文档。目录结构中包含了 .next（可能是 Next.js 项目）、diagnostics、server（包含了关于页面、路由、应用的内容）等。
 
-### Apps and Packages
+.next：看起来像是 Next.js 生成的构建目录，包含缓存、webpack、eslint 配置等。
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+diagnostics：可能包含调试和错误诊断的代码或配置。
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+server：包括服务端应用的代码和页面。
 
-### Utilities
+mobile
+包含了移动端应用的资源，例如图片和其他静态资源。
 
-This Turborepo has some additional tools already setup for you:
+web
+包含了 Web 端应用，目录下也有 .next 目录，表示使用 Next.js 作为前端框架。缓存和构建工具（如 swc 和 webpack）也在此目录下。
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+packages
+这是用于存放共享包或库的地方，包含了多个子目录：
 
-### Build
+backend：后端代码库。
 
-To build all apps and packages, run the following command:
+eslint-config：ESLint 配置文件，可能用于代码质量和风格检查。
 
-```
-cd my-turborepo
-pnpm build
-```
+typescript-config：TypeScript 配置文件，可能用于整个项目的 TypeScript 设置。
 
-### Develop
+ui：用户界面组件，可能包含共享的 UI 组件和样式。
 
-To develop all apps and packages, run the following command:
+src：UI 组件的源代码。
 
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+turbo/generators/templates：可能包含 TurboRepo 相关的模板文件。

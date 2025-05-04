@@ -11,15 +11,14 @@ node_modules
 .env.development.local
 .env.test.local
 .env.production.local
+.env.shared
+.env.production
 
 # Testing
 coverage
 
 # Turbo
 .turbo
-
-# Vercel
-.vercel
 
 # Build Outputs
 .next/
